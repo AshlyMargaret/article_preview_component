@@ -6,10 +6,11 @@
 .container{
     display: flex;
     flex-direction: row;
-    gap: 35px;
     justify-content: center;
     align-items: center;
+    gap: 35px;
 }
+
 .profileSec{
     display: flex;
     flex-direction: row;
@@ -48,6 +49,44 @@
     flex-direction: column;
     gap: 20px;
 }
+.ccc{
+    position: relative;
+}
+.social--media_icons {
+    background: #49556B;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+   
+    position: absolute;
+    right: -159px;
+    bottom: 91px;
+   
+  }
+  
+  .ccc img{
+    width: 15px;
+    cursor: pointer;
+  }
+  
+  .share {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .diamond {
+    background-color: #49556B;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -27px;
+    bottom: 124px;
+   
+    
+    transform: translate(101px, 40px) rotate(45deg);
+  }
 
 /* Media Query */
 

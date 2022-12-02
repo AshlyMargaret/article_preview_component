@@ -3,8 +3,17 @@ import './Home.css'
 import MainImage from './images/drawers.jpg'
 import ProfileImage from './images/avatar-michelle.jpg'
 import IconShare from './images/icon-share.svg'
+import {useState} from 'react';
+import facebook from './images/icon-facebook.svg'
+import twitter from './images/icon-twitter.svg'
+import pintrest from './images/icon-pinterest.svg'
+
 
 function Home() {
+    const [showShareIcons, setShowShareIcons] = useState(false);
+    function handleClick() {
+        setShowShareIcons((prevShareIcon) => !prevShareIcon);
+      }
   return (
     <div className='home'>
      <div className="container">
@@ -28,7 +37,19 @@ function Home() {
                 <p>28 June 2020</p>
              </div>
             </div>
-            <div className="sharedSec">
+            {showShareIcons ? (
+            <div className='ccc'>
+              <article className="social--media_icons">
+                <p className="share">SHARE</p>
+                <img src={facebook} alt="facebook" />
+                <img src={twitter} alt="twitter" />
+                <img src={pintrest} alt="pintrest" />
+              </article>
+              <div className="diamond"></div>
+              </div>
+          ) : null}
+
+            <div className="sharedSec" onClick={handleClick}>
                <img src={IconShare} alt="IconShare" />
             </div>
           </div>
